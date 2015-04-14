@@ -1,4 +1,19 @@
 term xterm
-
+#Disable the startup message
+startup_message off
+# set up the hardstatus line to show windows at all times
 hardstatus alwayslastline
 hardstatus string "%{= kC}[%H] | %-Lw%50>%{%= kg}<%n%f> %{= kW}%t%{= kC}%+Lw%<"
+# %H is the current hostname
+# %-Lw is all windows before current with their title
+# %n%f $t is the current window number/title
+# %t is the current window title
+# %+Lw is all windows after current with their title
+
+# use F8 to turn on the status bar
+bindkey -k k8 hardstatus alwayslastline
+# use F9 to turn off the status bar
+bindkey -k k9 hardstatus alwaysignore
+# Use F5 and F6 for prev/next window respectively
+bindkey -k k5 prev
+bindkey -k k6 next
