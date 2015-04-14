@@ -1,0 +1,4 @@
+term xterm
+
+hardstatus alwayslastline
+hardstatus string "%{= kC}[%H] | %-Lw%50>%{%= kg}<%n%f> %{= kW}%t%{= kC}%+Lw%<"
