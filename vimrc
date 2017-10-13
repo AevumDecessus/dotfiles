@@ -29,10 +29,9 @@ set smartcase   " Do smart case matching
 " Allow backspacing in insert mode
 set backspace=indent,eol,start
 " Tab handling
-set smartindent     " Use smart indenting on new lines
-set tabstop=4      " Number of spaces a tab counts for
-set softtabstop=4
-set shiftwidth=4    " Number of spaces to use for each step of indent
+set autoindent     " Use smart indenting on new lines
+set softtabstop=2
+set shiftwidth=2    " Number of spaces to use for each step of indent
 set expandtab       " Expand tabs to spaces
 
 " Overwrite :W and :Q to their lowercase counterparts because of typos
