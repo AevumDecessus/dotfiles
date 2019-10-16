@@ -42,3 +42,21 @@ set expandtab       " Expand tabs to spaces
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+" Load pathogen if it exists
+if filereadable("~/.vim/vim-pathogen/autoload/pathogen.vim")
+  runtime bundle/vim-pathogen/autoload/pathogen.vim
+  execute pathogen#infect()
+endif
+
+if filereadable("~/.vim/bundle/syntastic/.gitignore")
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0 
+  let g:syntastic_puppet_puppetlint_args = "--no-80chars-check --no-autoloader_layout-check --no-class_inherits_from_params_class-check" 
+endif

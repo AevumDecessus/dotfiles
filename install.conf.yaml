@@ -1,11 +1,17 @@
 - defaults:
     link:
+      create: true
       relink: true
+      force: false
 - clean: ['~']
 - link:
     ~/.dotfiles: ''
     ~/.vimrc: vimrc
     ~/.profile: profile
     ~/.screenrc: screenrc
+    ~/.vim:
+      force: true
+      path: vim
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
