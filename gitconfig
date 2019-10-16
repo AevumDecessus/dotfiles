@@ -1,0 +1,40 @@
+[user]
+  email = aevum@decess.us
+  name = AevumDecessus
+[push]
+  default = simple
+[alias]
+  #############
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  bdd = branch -D
+  br = branch -r
+  bc = rev-parse --abbrev-ref HEAD
+  bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+  #############
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -am
+  #############
+  f = fetch
+  fa = fetch --all
+  fo = fetch origin
+  fu = fetch upstream
+  #############
+  l = log --oneline
+  lg = log --oneline --graph --decorate
+  #############
+  m = merge
+  ma = merge --abort
+  mc = merge --continue
+  mf = merge --ff-only
+  ms = merge --skip
+  #############
+  o = checkout
+  ob = checkout -b
+  #############
+  pso = push origin
+[receive]
+  advertisePushOptions = true
