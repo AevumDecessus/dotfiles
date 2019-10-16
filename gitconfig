@@ -36,5 +36,7 @@
   ob = checkout -b
   #############
   pso = push origin
+  #############
+  s = status
 [receive]
   advertisePushOptions = true
