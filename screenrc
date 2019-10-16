@@ -17,3 +17,4 @@ bindkey -k k9 hardstatus alwaysignore
 # Use F5 and F6 for prev/next window respectively
 bindkey -k k5 prev
 bindkey -k k6 next
+defscrollback 30000
