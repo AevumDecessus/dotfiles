@@ -21,7 +21,7 @@ set incsearch   " Incremental search
 set ignorecase  " Do case insensitive matching
 if has('mouse')
   set mouse=a     " Enable mouse usage (all modes)
-edif
+endif
 set number      " Show line numbers
 set ruler       " Always show current cursor position
 set showcmd     " Show (partial) command in status line.
