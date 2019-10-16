@@ -19,7 +19,9 @@ set hidden      " Hide buffers when they are abandoned
 set hlsearch    " Highlight search results in buffer
 set incsearch   " Incremental search
 set ignorecase  " Do case insensitive matching
-set mouse=a     " Enable mouse usage (all modes)
+if has('mouse')
+  set mouse=a     " Enable mouse usage (all modes)
+edif
 set number      " Show line numbers
 set ruler       " Always show current cursor position
 set showcmd     " Show (partial) command in status line.
