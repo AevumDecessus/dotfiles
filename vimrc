@@ -44,12 +44,12 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 " Load pathogen if it exists
-if filereadable("~/.vim/bundle/vim-pathogen/autoload/pathogen.vim")
+if filereadable(expand("~/.vim/bundle/vim-pathogen/autoload/pathogen.vim"))
   runtime bundle/vim-pathogen/autoload/pathogen.vim
   execute pathogen#infect()
 endif
 
-if filereadable("~/.vim/bundle/syntastic/.gitignore")
+if filereadable(expand("~/.vim/bundle/syntastic/.gitignore"))
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
   set statusline+=%*
