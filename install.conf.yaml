@@ -6,7 +6,9 @@
 - clean: ['~']
 - link:
     ~/.dotfiles: ''
-    ~/.gitconfig: gitconfig 
+    ~/.gitconfig: gitconfig
+    ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
     ~/.vimrc: vimrc
     ~/.profile: profile
     ~/.screenrc: screenrc
