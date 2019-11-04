@@ -16,6 +16,19 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# pp - Useful for brace expansion to a file
+# i.e pp host{1..4}-{1,2}.example.com outputs
+# 
+# host1-1.example.com
+# host1-2.example.com
+# host2-1.example.com
+# host2-2.example.com
+# host3-1.example.com
+# host3-2.example.com
+# host4-1.example.com
+# host4-2.example.com
+alias pp='printf "%s\n"'
+
 # Docker Compose
 alias dcl="docker-compose logs -f"
 alias dcr="docker-compose restart"
