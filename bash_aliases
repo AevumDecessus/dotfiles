@@ -1,4 +1,8 @@
 #!/bin/bash
+# reload bashrc and subsequently bash_aliases
+alias bashreload="source ~/.bashrc && echo 'Bash config reloaded: current version: ${BASHRC_VERSION}'"
+alias bashv="echo 'Current version ${BASHRC_VERSION}'"
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
