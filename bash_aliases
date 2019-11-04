@@ -65,3 +65,10 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 ## get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+
+# Find processes as argument
+# usage: psg bash
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# Find things here
+alias fhere="find . -name "
