@@ -31,6 +31,33 @@ alias pp='printf "%s\n"'
 
 # Docker Compose
 alias dcl="docker-compose logs -f"
+alias dcp="docker-compose pull"
 alias dcr="docker-compose restart"
 alias dcs="docker-compose stop"
 alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+
+# Make parent directories automatically
+alias mkdir="mkdir -pv"
+
+# Make mount output human readable
+alias mount="mount | column -t"
+
+# Show my open ports
+alias ports="netstat -tulanp"
+
+# Prevent changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+## pass options to free ##
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
