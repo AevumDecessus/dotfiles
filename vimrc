@@ -64,4 +64,6 @@ if filereadable(expand("~/.vim/bundle/syntastic/.gitignore"))
 endif
 if filereadable(expand("~/.vim/bundle/nerdtree/.gitignore"))
   map <C-o> :NERDTreeToggle<CR>
+  " Kill vim if NERDTree is the only open pane
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 endif
