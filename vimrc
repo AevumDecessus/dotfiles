@@ -67,3 +67,9 @@ if filereadable(expand("~/.vim/bundle/nerdtree/.gitignore"))
   " Kill vim if NERDTree is the only open pane
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 endif
+if filereadable(expand("~/.vim/bundle/vim-indent-guides/.gitignore"))
+  colorscheme default
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_guide_size = 1
+  let g:indent_guides_color_change_percent = 1
+endif
