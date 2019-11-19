@@ -42,6 +42,7 @@ alias dcr="docker-compose restart"
 alias dcs="docker-compose stop"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
+alias dce="docker-compose exec"
 
 # Make parent directories automatically
 alias mkdir="mkdir -pv"
