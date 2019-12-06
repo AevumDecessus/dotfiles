@@ -35,6 +35,7 @@ set autoindent     " Use smart indenting on new lines
 set softtabstop=2
 set shiftwidth=2    " Number of spaces to use for each step of indent
 set expandtab       " Expand tabs to spaces
+set background=dark
 
 " Overwrite :W and :Q to their lowercase counterparts because of typos
 :command W w
@@ -68,8 +69,12 @@ if filereadable(expand("~/.vim/bundle/nerdtree/.gitignore"))
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 endif
 if filereadable(expand("~/.vim/bundle/vim-indent-guides/.gitignore"))
-  colorscheme default
   let g:indent_guides_enable_on_vim_startup = 1
   let g:indent_guides_guide_size = 1
   let g:indent_guides_color_change_percent = 1
+endif
+if filereadable(expand("~/.vim/bundle/vim-colors-solarized/README.mkd"))
+  colorscheme solarized
+else
+  colorscheme default
 endif
