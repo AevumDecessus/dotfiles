@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-export BASHRC_VERSION="2019.11.19"
+export BASHRC_VERSION="2019.12.06"
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -18,6 +18,9 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Set VISUAL and EDITOR correctly
+export VISUAL="vim"
+export EDITOR="${VISUAL}"
 # Source Aliases
 if [ -f $HOME/.bash_aliases ]; then
     . ${HOME}/.bash_aliases
