@@ -35,7 +35,6 @@ set autoindent     " Use smart indenting on new lines
 set softtabstop=2
 set shiftwidth=2    " Number of spaces to use for each step of indent
 set expandtab       " Expand tabs to spaces
-set background=dark
 
 " Overwrite :W and :Q to their lowercase counterparts because of typos
 :command W w
@@ -52,6 +51,13 @@ if filereadable(expand("~/.vim/bundle/vim-pathogen/autoload/pathogen.vim"))
   execute pathogen#infect()
 endif
 
+if filereadable(expand("~/.vim/bundle/vim-colors-solarized/README.mkd"))
+  colorscheme solarized
+else
+  colorscheme default
+endif
+
+set background=dark
 if filereadable(expand("~/.vim/bundle/syntastic/.gitignore"))
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
@@ -72,9 +78,7 @@ if filereadable(expand("~/.vim/bundle/vim-indent-guides/.gitignore"))
   let g:indent_guides_enable_on_vim_startup = 1
   let g:indent_guides_guide_size = 1
   let g:indent_guides_color_change_percent = 1
-endif
-if filereadable(expand("~/.vim/bundle/vim-colors-solarized/README.mkd"))
-  colorscheme solarized
-else
-  colorscheme default
+  let g:indent_guides_auto_colors = 0
+  autocmd VimEnter,ColorScheme * :hi IndentGuidesOdd ctermbg=darkgrey
+  autocmd VimEnter,ColorScheme * :hi IndentGuidesEven ctermbg=lightgrey
 endif
