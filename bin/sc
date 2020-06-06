@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+if [ -z "$1" ]
+then
+    SCREENNAME="screenage"
+else
+    SCREENNAME=$1
+fi
+
+if screen -list | grep -q $SCREENNAME; then
+    screen -x $SCREENNAME
+else
+    screen -A -R -m -S $SCREENNAME
+fi

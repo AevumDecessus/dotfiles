@@ -13,6 +13,7 @@
     ~/.profile: profile
     ~/.screenrc: screenrc
     ~/.vim: vim
+    ~/bin: bin
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
