@@ -4,7 +4,10 @@ alias bashreload="source ~/.bashrc && echo 'Bash config reloaded: current versio
 alias bashv="echo 'Current version ${BASHRC_VERSION}'"
 
 alias updatedot="cd ~/git/dotfiles && git pull && ./install && bashreload && cd -"
-alias stepboot="sudo step ca bootstrap --team-url https://home.aevumdecessus.com --team tinyca"
+
+# Silliness
+alias ttoss='echo "(╯°□°）╯︵┻━┻"'
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
