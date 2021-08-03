@@ -26,6 +26,12 @@ if [ -f $HOME/.bash_aliases ]; then
     . ${HOME}/.bash_aliases
 fi
 
+if [ -d "$HOME/.pyenv/bin" ] ; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
