@@ -1,7 +1,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-export BASHRC_VERSION="2021-08-03"
+if [ -f "$HOME/.dotfiles_version" ] ; then
+  source $HOME/.dotfiles_version
+fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
