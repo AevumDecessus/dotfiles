@@ -3,6 +3,8 @@
   name = AevumDecessus
 [push]
   default = simple
+[pull]
+  ff = only
 [alias]
   #############
   b = branch
