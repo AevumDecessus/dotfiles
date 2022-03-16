@@ -20,6 +20,19 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+####################
+# Useful Functions #
+####################
+
+#################################
+# Function to add path to $PATH #
+#################################
+function pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
 # Set VISUAL and EDITOR correctly
 export VISUAL="vim"
 export EDITOR="${VISUAL}"
@@ -27,11 +40,12 @@ export EDITOR="${VISUAL}"
 if [ -f $HOME/.bash_aliases ]; then
     . ${HOME}/.bash_aliases
 fi
+pathadd "$HOME/bin"
 
 if [ -d "$HOME/.pyenv/bin" ] ; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
+  export PYENV_ROOT="$HOME/.pyenv"
+  pathadd "$PYENV_ROOT/bin"
+  eval "$(pyenv init --path)"
 fi
 
 # Source global definitions
