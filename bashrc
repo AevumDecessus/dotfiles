@@ -40,7 +40,10 @@ export EDITOR="${VISUAL}"
 if [ -f $HOME/.bash_aliases ]; then
     . ${HOME}/.bash_aliases
 fi
+# My bin folder
 pathadd "$HOME/bin"
+# pip3 --user bin directory
+pathadd "$HOME/.local/bin"
 
 if [ -d "$HOME/.pyenv/bin" ] ; then
   export PYENV_ROOT="$HOME/.pyenv"
