@@ -21,6 +21,8 @@
   cm = commit -m
   cam = commit -am
   #############
+  d = diff HEAD
+  #############
   f = fetch
   fa = fetch --all
   fo = fetch origin
@@ -38,7 +40,10 @@
   o = checkout
   ob = checkout -b
   #############
+  ph = push origin HEAD
   pso = push origin
+  psu = push upstream
+  puh = push upstream HEAD
   #############
   s = status
 [receive]
