@@ -13,6 +13,7 @@
     ~/.vimrc: vimrc
     ~/.profile: profile
     ~/.screenrc: screenrc
+    ~/.tmux.conf: tmux
     ~/.vim: vim
     ~/bin: bin
     ~/.pyenv:
