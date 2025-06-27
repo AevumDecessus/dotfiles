@@ -48,3 +48,5 @@
   s = status
 [receive]
   advertisePushOptions = true
+[init]
+  defaultBranch = main
