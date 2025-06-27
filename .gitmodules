@@ -25,3 +25,6 @@
 [submodule "submodules/pyenv"]
 	path = submodules/pyenv
 	url = https://github.com/pyenv/pyenv.git
+[submodule "tmux-sessions"]
+	path = tmux-sessions
+	url = https://github.com/AevumDecessus/tmux-sessions.git

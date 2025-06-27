@@ -15,6 +15,7 @@
     ~/.tmux.conf: tmux
     ~/.vim: vim
     ~/bin: bin
+    ~/bin/tx.sh: tmux-sessions/tx.sh
     ~/.pyenv:
       path: submodules/pyenv
       force: true
