@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+HOSTNAME=/usr/bin/hostname
+CUT=/usr/bin/cut
+DOCKER=/usr/bin/docker
+
+HOST=$(${HOSTNAME} | ${CUT} -f. -d1 | ${CUT} -f- -d2)
+
+STACK=periphery-${HOST}
+STACKS=~/stacks/${STACK}
+
+cd ${STACKS}
+DCSTACK="${DOCKER} compose -p ${STACK} -f compose.yaml --env-file .env"
+
+${DSCTACK} pull
+${DCSTACK} stop
+${DCSTACK} rm -f
+${DCSTACK} up -d
