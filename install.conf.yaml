@@ -21,5 +21,5 @@
       force: true
 
 - shell:
-  - [git submodule update --init --recursive --force, Installing submodules]
-  - [git submodule foreach git pull origin HEAD, Updating all submodules]
+  - [git submodule update --init --recursive --force --progress, Installing submodules]
+  - [git submodule foreach git pull origin HEAD --progress, Updating all submodules]
